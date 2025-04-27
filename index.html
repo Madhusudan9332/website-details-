@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Website Requirement Form</title>
+    <title>Client Website Requirements Form</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
         (function(){
-            emailjs.init("7joseBWGvuG1hVj7v"); // PUBLIC KEY
+            emailjs.init("7joseBWGvuG1hVj7v"); // your public key
         })();
     </script>
 </head>
@@ -17,22 +17,62 @@
     <h1>Website Requirements Form</h1>
     <form id="requirements-form">
         
+        <label>Full Name:</label>
+        <input type="text" name="fullName" required>
+
+        <label>Email Address:</label>
+        <input type="email" name="email" required>
+
+        <label>Phone Number:</label>
+        <input type="text" name="phone" required>
+
         <label>Company/Organization Name:</label>
-        <input type="text" name="companyName" required>
+        <input type="text" name="companyName">
 
         <label>Existing Website URL (if any):</label>
         <input type="url" name="websiteUrl">
 
+        <label>Type of Website:</label>
+        <select name="websiteType" required>
+            <option value="">Select</option>
+            <option value="Business">Business</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Portfolio">Portfolio</option>
+            <option value="Blog">Blog</option>
+            <option value="Other">Other</option>
+        </select>
+
         <label>Primary Goal of Website:</label>
         <input type="text" name="primaryGoal" required>
 
-        <label>Preferred Technology Stack:</label>
+        <label>Preferred Technology Stack (if any):</label>
         <input type="text" name="techStack">
+
+        <label>Required Features:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="features" value="Contact Form"> Contact Form</label>
+            <label><input type="checkbox" name="features" value="Gallery"> Gallery</label>
+            <label><input type="checkbox" name="features" value="Blog"> Blog</label>
+            <label><input type="checkbox" name="features" value="Payment Gateway"> Payment Gateway</label>
+            <label><input type="checkbox" name="features" value="Admin Panel"> Admin Panel</label>
+        </div>
 
         <label>Expected Number of Pages:</label>
         <input type="text" name="pageCount">
 
-        <label>Additional Notes:</label>
+        <label>Target Audience:</label>
+        <input type="text" name="targetAudience">
+
+        <label>Design Inspirations (websites you like):</label>
+        <input type="text" name="designInspiration">
+
+        <label>Timeline to Complete Project:</label>
+        <input type="text" name="timeline">
+
+        <label>Budget Range:</label>
+        <input type="text" name="budget">
+
+        <label>Additional Notes / Requirements:</label>
         <textarea name="additionalNotes" rows="4"></textarea>
 
         <button type="submit">Submit</button>
