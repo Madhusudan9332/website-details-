@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Requirements Form</title>
+    <title>Website Requirement Form</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("YOUR_PUBLIC_KEY"); // <-- replace with your Public Key
+        })();
+    </script>
 </head>
 <body>
 
@@ -12,7 +17,6 @@
     <h1>Website Requirements Form</h1>
     <form id="requirements-form">
         
-        <h2>General Information</h2>
         <label>Company/Organization Name:</label>
         <input type="text" name="companyName" required>
 
@@ -22,78 +26,13 @@
         <label>Primary Goal of Website:</label>
         <input type="text" name="primaryGoal" required>
 
-        <h2>Website Type</h2>
-        <label>Type of Website:</label>
-        <input type="text" name="websiteType" required>
-
-        <label>Example Websites You Like:</label>
-        <textarea name="exampleWebsites" rows="3"></textarea>
-
-        <h2>Design Preferences</h2>
-        <label>Do you have branding assets (logo, color scheme)?</label>
-        <input type="text" name="brandingAssets">
-
-        <label>Preferred Style:</label>
-        <input type="text" name="style">
-
-        <label>Special Features or Animations:</label>
-        <textarea name="features" rows="3"></textarea>
-
-        <h2>Content</h2>
-        <label>Will you provide content?</label>
-        <select name="provideContent" required>
-            <option value="">Select</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
+        <label>Preferred Technology Stack:</label>
+        <input type="text" name="techStack">
 
         <label>Expected Number of Pages:</label>
         <input type="text" name="pageCount">
 
-        <h2>Functional Requirements</h2>
-        <label>Required Features (select all that apply):</label>
-        <div class="checkbox-group">
-            <label><input type="checkbox" name="featuresNeeded" value="Contact Form"> Contact Form</label>
-            <label><input type="checkbox" name="featuresNeeded" value="Booking System"> Booking System</label>
-            <label><input type="checkbox" name="featuresNeeded" value="Online Payments"> Online Payments</label>
-            <label><input type="checkbox" name="featuresNeeded" value="User Login"> User Registration/Login</label>
-            <label><input type="checkbox" name="featuresNeeded" value="Admin Panel"> Admin Panel</label>
-            <label><input type="checkbox" name="featuresNeeded" value="Blog"> Blog/News Section</label>
-            <label><input type="checkbox" name="featuresNeeded" value="Multi-language"> Multi-language Support</label>
-            <label><input type="checkbox" name="featuresNeeded" value="SEO"> SEO Optimization</label>
-        </div>
-
-        <h2>Technical Details</h2>
-        <label>Preferred Technology Stack:</label>
-        <input type="text" name="techStack">
-
-        <label>Do you have domain and hosting?</label>
-        <select name="domainHosting" required>
-            <option value="">Select</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-
-        <label>Third-party Integrations:</label>
-        <textarea name="thirdParty" rows="3"></textarea>
-
-        <h2>Timeline and Budget</h2>
-        <label>Desired Launch Date:</label>
-        <input type="date" name="launchDate">
-
-        <label>Budget Range:</label>
-        <input type="text" name="budget">
-
-        <h2>Ongoing Support</h2>
-        <label>Need Ongoing Maintenance?</label>
-        <select name="maintenance" required>
-            <option value="">Select</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-
-        <h2>Additional Information</h2>
-        <label>Any other notes:</label>
+        <label>Additional Notes:</label>
         <textarea name="additionalNotes" rows="4"></textarea>
 
         <button type="submit">Submit</button>
