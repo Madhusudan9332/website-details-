@@ -1,5 +1,5 @@
 document.getElementById('requirements-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Prevent default form submit
 
     emailjs.sendForm('service_sn8otdd', 'template_e7xusag', this)
         .then(function(response) {
@@ -8,5 +8,5 @@ document.getElementById('requirements-form').addEventListener('submit', function
            alert('Failed to send form. Please try again. ' + JSON.stringify(error));
         });
 
-    this.reset();
+    this.reset(); // Reset the form after submission
 });
